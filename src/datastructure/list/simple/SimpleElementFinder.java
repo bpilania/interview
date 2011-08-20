@@ -23,7 +23,7 @@ public class SimpleElementFinder {
 		System.out.println("Search the -3 Node");
 		System.out.println("===============================================================================");
 		ConsoleReader reader = new ConsoleReader();
-		String[] elements = reader.readItems();
+		String[] elements = reader.readStringItems();
 		if (elements.length < 3) {
 			System.err.println("There must be more than 3 element!");
 			System.exit(1);

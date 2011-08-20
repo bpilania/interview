@@ -39,7 +39,7 @@ public class MaxCommonStringSearch {
 		System.out.println("Search Max Common String");
 		System.out.println("===============================================================================");
 		ConsoleReader reader = new ConsoleReader();
-		String[] elements = reader.readItems();
+		String[] elements = reader.readStringItems();
 		MaxCommonStringSearch searcher = new MaxCommonStringSearch();
 		String maxCommonString = searcher.findMaxCommonString(elements);
 		System.out.println("Max Common String is: " + maxCommonString);

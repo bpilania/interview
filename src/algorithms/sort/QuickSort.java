@@ -57,14 +57,11 @@ public class QuickSort {
 	public static void main(String[] args){
 		System.out.println("The Quick Sort Algorithm Implementation");
 		System.out.println("===========================================================");
+		
 		ConsoleReader reader = new ConsoleReader();
-		String[] values = reader.readItems();
-		int[] array = new int[values.length];
-		for(int i = 0; i < values.length; i++){
-			array[i] = Integer.parseInt(values[i]); 
-		}
-		QuickSort sorter = new QuickSort();
-		//int[] array = new int[]{1, 9, 2, 3, 7, 4, 35, 22};
+		System.out.print("Please input the int array elements: ");
+		int[] array = reader.readIntItems();
+		QuickSort sorter = new QuickSort();		
 		System.out.print("The quick sort result is: ");
 		sorter.sort(array, 0, array.length - 1);
 	}
