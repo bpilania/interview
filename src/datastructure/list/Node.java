@@ -1,4 +1,4 @@
-package datastructure.list.simple;
+package datastructure.list;
 
 public class Node {
 	private String value;

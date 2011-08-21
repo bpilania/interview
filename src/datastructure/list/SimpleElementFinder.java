@@ -1,4 +1,4 @@
-package datastructure.list.simple;
+package datastructure.list;
 
 import utils.ConsoleReader;
 
