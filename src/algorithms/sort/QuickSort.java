@@ -37,8 +37,14 @@ public class QuickSort {
 				int tmp = array[i];
 				array[i] = array[j];
 				array[j] = tmp;
-				i ++;
-				pivot = j;
+				if(pivot == i){
+					pivot = j;
+					i ++;				
+				} else if (pivot == j){
+					pivot = i;
+					j --;
+				}
+				
 			} else if (array[j] >= array[i]){
 				j --;
 			}
