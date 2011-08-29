@@ -1,4 +1,4 @@
-package basics;
+package java.fundamentals;
 
 public class InstanceInitializer {
 

@@ -1,4 +1,4 @@
-package basics;
+package java.fundamentals;
 
 import utils.ConsoleReader;
 
