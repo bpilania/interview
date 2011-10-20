@@ -10,5 +10,6 @@ src
  |- algorithms.sort: Implementation of sorting algorithms
  |- basics: Some basic but tricky interview tests
  |- datastructure.list: Things related to list
+ |- datastructure.tree: Things related to tree
  
 documents: summarizes the interview questions in different perspectives.
