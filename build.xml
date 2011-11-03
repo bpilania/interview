@@ -2,6 +2,10 @@
 
 <project basedir="." default="build" name="interview">
 	<property name="dist.dir" value="dist"/>
+	<property name="user" value="root"/>
+	<property name="env.ip" value="9.186.66.84"/>
+	<property name="pwd" value="passw0rd"/>
+	<property name="location" value="/root/deploy/artifact/interview.jar"/>
 	<path id="project.classpath">
 		<pathelement location="build/classes" />
 	</path>
@@ -34,5 +38,10 @@
 		<echo message="${ant.project.name}: ${ant.file}" />
 		<jar destfile="${dist.dir}/interview.jar" basedir="build/classes"/>
 		<delete dir="build" />
+	</target>
+	
+	
+	<target name="deploy">
+		<scp file="../dist/interview.jar" todir="${user}@${env.ip}:${location}" password="${pwd}" trust="true"/>	
 	</target>
 </project>

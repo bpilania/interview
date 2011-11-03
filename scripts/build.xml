@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project basedir="." default="deploy" name="interview.deploy">
-	<property name="user" value="root"/>
-	<property name="env.ip" value="9.186.66.84"/>
-	<property name="pwd" value="passw0rd"/>
-	<property name="location" value="/root/deploy/artifact/interview.jar"/>
-	<target name="deploy">
-		<scp file="../dist/interview.jar" todir="${user}@${env.ip}:${location}" password="${pwd}" trust="true"/>	
-	</target>
+	
 </project>
