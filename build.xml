@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="build" name="interview">
+	<property name="dist.dir" value="dist"/>
+	<path id="project.classpath">
+		<pathelement location="build/classes" />
+	</path>
+	
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist"/>
+		<copy includeemptydirs="false" todir="build/classes">
+			<fileset dir="src">
+				<exclude name="**/*.launch" />
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="dist" />
+	</target>
+
+
+	<target name="compile" depends="init">
+		<echo message="${ant.project.name}: ${ant.file}" />
+		<javac debug="true" destdir="build/classes" fork="yes">
+			<src path="src"/>
+			<classpath refid="project.classpath"/>
+		</javac>
+	</target>
+
+	<target name="build" depends="clean, compile">
+		<echo message="${ant.project.name}: ${ant.file}" />
+		<jar destfile="${dist.dir}/interview.jar" basedir="build/classes"/>
+		<delete dir="build" />
+	</target>
+</project>
