@@ -44,22 +44,26 @@ public class ArrayCycleWalk {
 		int cycleCount = 0;
 		int rowCount = array.length;
 		int columnCount = array[0].length;
-
+		System.out.println("The cycle walk of the array is below");
+		System.out.println("-----------------------------------------------");
 		while (!stop) {
 			int columnFrom = cycleCount;
 			int columnStop = columnCount - cycleCount;
 			int rowFrom = cycleCount;
 			int rowStop = rowCount - cycleCount;
 			if (rowCount <=2  || columnCount <= 2 || columnFrom == columnCount / 2 || rowFrom == rowCount / 2) {
+				// rowCount <=2  || columnCount <= 2 condition means only one cycle is enough for the given array
+				// columnFrom == columnCount / 2 || rowFrom == rowCount / 2 condition means the last cycle 
+				// for the given multi-cycle array 
 				stop = true;
 			}
 			for (int i = columnFrom; i < columnStop; i++)
 				System.out.print(array[rowFrom][i] + " ");
 			for (int i = rowFrom + 1; i < rowStop; i++)
 				System.out.print(array[i][columnStop - 1] + " ");
-			for (int i = columnStop - 2; i >= columnFrom && rowCount != 1; i--)
+			for (int i = columnStop - 2; i >= columnFrom && rowCount != 1; i--) // no back printing for single line array
 				System.out.print(array[rowStop - 1][i] + " ");
-			for (int i = rowStop - 2; i > rowFrom && columnCount != 1; i--)
+			for (int i = rowStop - 2; i > rowFrom && columnCount != 1; i--) // no back printing for single column array
 				System.out.print(array[i][columnFrom] + " ");
 			cycleCount++;
 		}
