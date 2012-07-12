@@ -28,6 +28,23 @@ public class ConsoleReader {
 		return values;
 	}
 	
+	public int[] readSortedIntItems(){
+		int[] array = this.readIntItems();
+		for(int i = 0; i < array.length -1; i ++)
+			for(int j = i + 1; j < array.length; j ++){
+				if(array[i] > array[j]){
+					int tmp = array[i];
+					array[i] = array[j];
+					array[j] = tmp;
+				}
+			}
+		System.out.print("The sorted input array is : ");
+		for(int a : array){
+			System.out.print(a + " ");
+		}
+		System.out.println();
+		return array;
+	}
 	/**
 	 * Input elements are separated by white space
 	 * @return The integer array as parsed from console input

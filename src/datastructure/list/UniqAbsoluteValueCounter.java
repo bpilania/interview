@@ -54,21 +54,7 @@ public class UniqAbsoluteValueCounter {
 		ConsoleReader reader = new ConsoleReader();
 		System.out.println("Count the amount of unique absolute values in the given int array");
 		System.out.println("===============================================================================");
-		System.out.print("Please input the int array: ");
-		int[] array = reader.readIntItems();
-		for(int i = 0; i < array.length -1; i ++)
-			for(int j = i + 1; j < array.length; j ++){
-				if(array[i] > array[j]){
-					int tmp = array[i];
-					array[i] = array[j];
-					array[j] = tmp;
-				}
-			}
-		System.out.print("The sorted array is : ");
-		for(int a : array){
-			System.out.print(a + " ");
-		}
-		System.out.println();
+		int [] array = reader.readSortedIntItems();
 		UniqAbsoluteValueCounter counter = new UniqAbsoluteValueCounter();
 		int count = counter.countUniqAbsoluteValues(array);
 		System.out.println("The amount of unique absolute value: " + count);

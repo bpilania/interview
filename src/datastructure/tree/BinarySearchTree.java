@@ -10,6 +10,10 @@ public class BinarySearchTree {
 			insert(nodeValues[i]);
 		}
 	}
+
+    public BinaryTreeNode getRoot(){
+        return this.root;
+    }
 	
 	public void insert(int newValue){
 		BinaryTreeNode node = root;
