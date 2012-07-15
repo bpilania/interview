@@ -10,14 +10,19 @@ import utils.ConsoleReader;
  */
 public class QuickSort {
 
-	public void sort(int[] array, int begin, int end){
+	class State {
+		public int[] array;
+		public int pivot;
+	}
+	public int[] sort(int[] array, int begin, int end){
 		if (begin <= end){
-			int pivot = this.partition(array, begin, end);			
-			this.sort(array, begin, pivot - 1);	
-			System.out.print(array[pivot] + " ");
-			this.sort(array, pivot + 1, end);
+			State state = this.partition(array, begin, end);
+			array = state.array;
+			int pivot = state.pivot;
+			array = this.sort(array, begin, pivot - 1);	
+			array = this.sort(array, pivot + 1, end);
 		}
-		
+		return array;
 	}
 	
 	/**
@@ -27,37 +32,36 @@ public class QuickSort {
 	 * @param array The collection of elements under question
 	 * @param begin the start offset
 	 * @param end the end offset
-	 * @return the pivot
+	 * @return The state of the quick sort, including the current array and the current pivot
 	 */
-	private int partition(int[] array, int begin, int end){
-		int pivot = begin;
-		int i = begin, j = end;
-		while(i < j){
-			if (array[j] < array[i]){
-				int tmp = array[i];
-				array[i] = array[j];
-				array[j] = tmp;
-				if(pivot == i){
-					pivot = j;
-					i ++;				
-				} else if (pivot == j){
-					pivot = i;
-					j --;
-				}
-				
-			} else if (array[j] >= array[i]){
-				j --;
-			}
-		}
+	private State partition(int[] array, int begin, int end){
+        int i = begin - 1;
+        int value = array[end];
+        
+        // At any given time, the for loop divides array[begin ... end] into 4 sections:
+        //     1) array[begin .. i] the elements smaller or equal than array[end]
+        //     2) array[i+1 .. j-1] the elements larger than array[end]
+        //     3) array[j .. end-1] unrestricted elements
+        //     4) array[end] the reference value
+        for(int j = begin; j < end; j++){
+        	if(array[j] <= value) { 
+        		i++;
+        		array = this.switchElements(array, i, j); 
+        	}
+        }
+        
+        State state = new State();
+        state.array = this.switchElements(array, i + 1, end); // switch array[end] to section 1)
+        state.pivot = i + 1;
 
-/* Please uncomment to see the quick sort process
-		System.out.print("Pivot: " + array[pivot] + ", Sequence: "); 
-		for (int k = 0; k< array.length; k ++){
-			System.out.print(array[k] + " ");
-		}
-		System.out.println();
-*/
-		return pivot;
+		return state;
+	}
+	
+	private int[] switchElements(int[] array, int i, int j) {
+		int tmp = array[i];
+		array[i] = array[j];
+		array[j] = tmp;
+		return array;
 	}
 	
 	public static void main(String[] args){
@@ -69,6 +73,7 @@ public class QuickSort {
 		int[] array = reader.readIntItems();
 		QuickSort sorter = new QuickSort();		
 		System.out.print("The quick sort result is: ");
-		sorter.sort(array, 0, array.length - 1);
+		for(int value : sorter.sort(array, 0, array.length - 1))
+			System.out.print(value + " ");
 	}
 }
