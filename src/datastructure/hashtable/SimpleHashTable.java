@@ -92,7 +92,7 @@ public class SimpleHashTable<K,V> {
         this.threshold =  (int) (this.capacity * this.loadFactor);
     }
 
-    public V remove(K key){
+    public synchronized V remove(K key){
         int hash = key.hashCode();
         int index = (hash & 0x7FFFFFFF) % this.capacity; 
 
