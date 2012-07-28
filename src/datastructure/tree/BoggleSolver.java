@@ -118,8 +118,8 @@ public class BoggleSolver {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//String array = "djhi,klps,yeut,eorn";
-		String array = "fxie,amlo,ewbx,astu";
+		String array = "djhi,klps,yeut,eorn";
+		//String array = "fxie,amlo,ewbx,astu";
 		String[] rows = array.split(",");
 		
 		int rowsCount = rows.length;
