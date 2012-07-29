@@ -79,12 +79,12 @@ public class KValueNodePairSearch {
     }
 	
 	public static void main(String[] args){
-		System.out.println("The Binary Search Implementation");
+		System.out.println("The K Value Node Pair Search Implementation");
 		System.out.println("========================================================================");
 		
 		//Prepare sorted input
 		ConsoleReader reader = new ConsoleReader();
-		System.out.print("Please input the int array elements: ");
+		System.out.print("Please input a list of tree node values: ");
 		int[] array = reader.readIntItems();
         BinarySearchTree tree = new BinarySearchTree(array);
 		
