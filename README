@@ -2,14 +2,3 @@ This interview project is a place to share interview experience.
 
 This is an Eclipse project, please checkout and directly import into your local Eclipse workspace.
 
-The content organization:
-src
- |- algorithms: General algorithm interview questions
- |- algorithms.bczm.chapter2: 《编程之美》第二章部分算法实现
- |- algorithms.bczm.chapter3: 《编程之美》第三章部分算法实现
- |- algorithms.sort: Implementation of sorting algorithms
- |- basics: Some basic but tricky interview tests
- |- datastructure.list: Things related to list
- |- datastructure.tree: Things related to tree
- 
-documents: summarizes the interview questions in different perspectives.
