@@ -71,7 +71,7 @@ public class SubMatrixWithMaximumSum {
 					break;
 				int matrixSum = calculateMatrixSum(rowLeftUpper, columnLeftUpper,
 	                                               rowRightBottom, columnRightBottom);
-				System.out.println(String.format("Left Upper Point = (%s, %s), Rows = %s, Columns = %s, Sum = %s", rowLeftUpper, columnLeftUpper,
+				System.out.println(String.format("Left Upper Point = (%s, %s), Right Bottom Point = (%s, %s), Sum = %s", rowLeftUpper, columnLeftUpper,
                         rowRightBottom, columnRightBottom, matrixSum));
 				if(matrixSum > this.maxSum){
 					this.maxSum = matrixSum;
@@ -159,7 +159,7 @@ public class SubMatrixWithMaximumSum {
 		for(int[] row: array) {
 			System.out.println("\t");
 			for(int column: row)
-				System.out.print(column + "    ");			
+				System.out.print(String.format("%5d", column));			
 		}
 		
 		System.out.println("\n");
@@ -167,10 +167,12 @@ public class SubMatrixWithMaximumSum {
 		finder.findMatrixWithMaxSum(array);
 
 		System.out.println();
-		System.out.println("Max Submatrix Sum: " + finder.getMaxSum());
-		System.out.println(String.format("Max Submatrix: leftUpper(%s, %s), rows: %s, columns: %s", 
+		System.out.println("Max Sub Matrix Information");
+		System.out.println("-----------------------------------");
+		System.out.println(String.format("Left Upper Point = (%s, %s), Bottom Right Point = (%s, %s), Sum = %s", 
 				finder.getMaxSumLeftUpperPointRow(), finder.getMaxSumLeftUpperPointColumn(),
-				finder.getMaxSumRows(), finder.getMaxSumColumns()));
+				finder.getMaxSumLeftUpperPointRow() + finder.getMaxSumRows() - 1, 
+				finder.getMaxSumLeftUpperPointColumn() + finder.getMaxSumColumns() - 1, finder.getMaxSum()));
 	}
 
 }
