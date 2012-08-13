@@ -7,12 +7,13 @@ public class HeapSort<T extends Comparable<T>> {
 	/**
 	 * The heapify process makes sure the largest element is on the top of the subtree whose root node is 
 	 * at the "index" position in the heap.
+	 * If heapifyForSorting, the heapify's time complexity is O(logN); otherwise, the complexity is O(1)
 	 * @param data
 	 * @param index
 	 * @param heapSize indicating the size of the heap on top of the data array.
 	 * @return 
 	 */
-	public T[] heapify(T[] data, int index, int heapSize) {
+	public T[] heapify(T[] data, int index, int heapSize, boolean heapifyForSorting) {
 		int lastIndex = heapSize - 1;
 
 		int largest = index;
@@ -25,7 +26,8 @@ public class HeapSort<T extends Comparable<T>> {
 			largest = rightChildIndex;
 		if(largest != index) {
 			data = this.switchElements(data, index, largest);
-			data = this.heapify(data, largest, heapSize);
+			if(heapifyForSorting)
+				data = this.heapify(data, largest, heapSize, heapifyForSorting);
 		}
 		return data;
 	}
@@ -37,7 +39,7 @@ public class HeapSort<T extends Comparable<T>> {
 	public void buildMaxHeap(T[] data){
 		int lastNonLeafNodeIndex = (data.length - 1)/2; 
 		for(int i = lastNonLeafNodeIndex; i >= 0; i --) 
-			data = this.heapify(data, i, data.length);
+			data = this.heapify(data, i, data.length, false);
 	}
 	
 	/**
@@ -54,7 +56,7 @@ public class HeapSort<T extends Comparable<T>> {
         for(int i = data.length - 1; i >= 1; i --) {
         	this.switchElements(data, 0, data.length - 1 - count);
         	count ++;
-        	data = this.heapify(data, 0, data.length - count);
+        	data = this.heapify(data, 0, data.length - count, true);
         }
         return data;
 	}
