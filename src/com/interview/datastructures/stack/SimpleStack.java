@@ -1,4 +1,4 @@
-package com.interview.datastructures.hashtable;
+package com.interview.datastructures.stack;
 
 /**
  * Design a stack. We want to push, pop, and also, retrieve the minimum element in constant time.
