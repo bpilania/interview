@@ -3,15 +3,22 @@ package com.interview.lectures.unionfind;
 public class TestUnionFind {
 	public static final int QUICKFIND = 1;
 	public static final int QUICKUNION = 2;
-	public static final int ENHENCEDQUICKUNION = 3;
+	public static final int ENHENCEDQUICKUNIONWEIGHT = 3;
+	public static final int ENHENCEDQUICKUNIONPATH = 4;
+	public static final int ENHENCEDQUICKUNIONWEIGHTANDPATH = 5;
+	
 	public static IUnionFind getUnionFind(int type, int N){
 		switch(type){
 		case QUICKFIND:
 			return new QuickFind(N);
 		case QUICKUNION:
 			return new QuickUnion(N);
-		case ENHENCEDQUICKUNION:
-			return new EnhancedQuickUnion(N);
+		case ENHENCEDQUICKUNIONWEIGHT:
+			return new EnhancedQuickUnionWeightTree(N);
+		case ENHENCEDQUICKUNIONPATH:
+			return new EnhencedQuickUnionPathCompression(N);
+		case ENHENCEDQUICKUNIONWEIGHTANDPATH:
+			return new EnhancedQuickUnionWeightTreeWithPathCompression(N);
 		default:
 			return null;
 		}
@@ -31,7 +38,15 @@ public class TestUnionFind {
 		testCase(finder);
 		
 		System.out.println("Test Enhanced Quick Union");
-		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNION, N);
+		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNIONWEIGHT, N);
+		testCase(finder);
+		
+		System.out.println("Test Enhanced Quick Union");
+		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNIONPATH, N);
+		testCase(finder);
+		
+		System.out.println("Test Enhanced Quick Union");
+		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNIONWEIGHTANDPATH, N);
 		testCase(finder);
 		
 	}
