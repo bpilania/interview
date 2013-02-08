@@ -1,6 +1,13 @@
 package com.interview.lectures.unionfind;
 
 public class QuickUnionFind implements IUnionFind{
+	/*
+	 * User a integer array to store the flag of each node, the node with same flag in one connectivity.
+	 * quickfind:
+	 * 	initialize: N
+	 * 	union: N
+	 * 	find: 1
+	 */
 	public final int N;
 	public int[] index;
 	
