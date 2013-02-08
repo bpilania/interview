@@ -2,10 +2,16 @@ package com.interview.lectures.unionfind;
 
 public class TestUnionFind {
 	public static final int QUICKFIND = 1;
+	public static final int QUICKUNION = 2;
+	public static final int ENHENCEDQUICKUNION = 3;
 	public static IUnionFind getUnionFind(int type, int N){
 		switch(type){
 		case QUICKFIND:
-			return new QuickUnionFind(N);
+			return new QuickFind(N);
+		case QUICKUNION:
+			return new QuickUnion(N);
+		case ENHENCEDQUICKUNION:
+			return new EnhancedQuickUnion(N);
 		default:
 			return null;
 		}
@@ -16,7 +22,21 @@ public class TestUnionFind {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int N = 10;
+		System.out.println("Test Quick Find");
 		IUnionFind finder = TestUnionFind.getUnionFind(QUICKFIND, N);
+		testCase(finder);
+		
+		System.out.println("Test Quick Union");
+		finder = TestUnionFind.getUnionFind(QUICKUNION, N);
+		testCase(finder);
+		
+		System.out.println("Test Enhanced Quick Union");
+		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNION, N);
+		testCase(finder);
+		
+	}
+	
+	public static void testCase(IUnionFind finder){
 		finder.union(4, 3);
 		finder.union(3, 8);
 		finder.union(6, 5);
@@ -27,6 +47,7 @@ public class TestUnionFind {
 		finder.union(5, 0);
 		finder.union(7, 2);
 		finder.union(6, 1);
+		System.out.println(finder.toString());
 		System.out.println(finder.connected(0, 7));
 	}
 
