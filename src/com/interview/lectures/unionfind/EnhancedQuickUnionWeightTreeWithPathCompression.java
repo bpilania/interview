@@ -50,6 +50,12 @@ public class EnhancedQuickUnionWeightTreeWithPathCompression extends UnionFindBa
 			return false;
 		}
 	}
+
+	@Override
+	public int find(int a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 
 }

@@ -40,6 +40,24 @@ public class SortBySwap {
 		return num;
 	}
 	
+	public static int findMinInverseNumber(int[] array){
+		int min = Integer.MAX_VALUE;
+		int minInverseNumber = Integer.MAX_VALUE;
+		for(int i = array.length - 1; i >= 0; i--){
+			if(array[i] > min){
+				//is a inverse number;
+				if(array[i] < minInverseNumber){
+					//update the min inverse number
+					minInverseNumber = array[i];
+				}
+			} else {
+				min = array[i];
+			}
+		}
+		return minInverseNumber;
+		
+	}
+	
 	public static int sortBySelectInverseNumber(int[] array){
 		int num = 0;
 		int lastMin = Integer.MIN_VALUE;
@@ -82,8 +100,35 @@ public class SortBySwap {
 		int[] testArray = {5,3,1,2,4};
 		print(testArray);
 		
-		int num = sortBySelectInverseNumber(testArray);
-		print(testArray);
-		System.out.println("swap num : " + num);
+//		int num = sortBySelectInverseNumber(testArray);
+//		print(testArray);
+//		System.out.println("swap num : " + num);
+		
+		int minInverseNumber = findMinInverseNumber(testArray);
+		System.out.println("minInverseNumber : " + minInverseNumber);
+		
+		System.out.println();
+		testArray = new int[]{5,4,3,2,1};
+		print(testArray);	
+		minInverseNumber = findMinInverseNumber(testArray);
+		System.out.println("minInverseNumber : " + minInverseNumber);
+		
+		System.out.println();
+		testArray = new int[]{1,2,3,4,5};
+		print(testArray);	
+		minInverseNumber = findMinInverseNumber(testArray);
+		System.out.println("minInverseNumber : " + minInverseNumber);
+		
+		System.out.println();
+		testArray = new int[]{1,6,2,4,-1,1,3};
+		print(testArray);	
+		minInverseNumber = findMinInverseNumber(testArray);
+		System.out.println("minInverseNumber : " + minInverseNumber);
+		
+		System.out.println();
+		testArray = new int[]{5,3,1,2, 2,4};
+		print(testArray);	
+		minInverseNumber = findMinInverseNumber(testArray);
+		System.out.println("minInverseNumber : " + minInverseNumber);
 	}
 }

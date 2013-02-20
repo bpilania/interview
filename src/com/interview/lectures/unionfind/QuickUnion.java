@@ -39,4 +39,15 @@ public class QuickUnion extends UnionFindBase {
 		}
 		return index;
 	}
+
+	@Override
+	public int find(int a) {
+		int parent_a = this.getParent(a);
+		for(int i = N-1; i >= 0; i--){
+			if(this.getParent(i) == parent_a){
+				return i;
+			} 
+		}
+		return a;
+	}
 }

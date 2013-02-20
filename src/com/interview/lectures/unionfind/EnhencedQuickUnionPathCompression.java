@@ -38,4 +38,10 @@ public class EnhencedQuickUnionPathCompression extends UnionFindBase {
 		}
 		return index;
 	}
+
+	@Override
+	public int find(int a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

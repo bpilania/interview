@@ -46,6 +46,18 @@ public class QuickFind extends UnionFindBase{
 			return false;
 		}
 	}
+
+
+	@Override
+	public int find(int a) {
+		int flag_a = this.index[a];
+		for(int i = N-1; i >= 0; i--){
+			if(this.index[i] == flag_a){
+				return i;
+			} 
+		}
+		return a;
+	}
 	
 	
 }

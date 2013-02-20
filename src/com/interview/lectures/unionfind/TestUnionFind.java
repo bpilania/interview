@@ -37,11 +37,11 @@ public class TestUnionFind {
 		finder = TestUnionFind.getUnionFind(QUICKUNION, N);
 		testCase(finder);
 		
-		System.out.println("Test Enhanced Quick Union");
+		System.out.println("Test Enhanced Quick Union With Weight");
 		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNIONWEIGHT, N);
-		testCase(finder);
+		testCase3(finder);
 		
-		System.out.println("Test Enhanced Quick Union");
+		System.out.println("Test Enhanced Quick Union With Path Compression");
 		finder = TestUnionFind.getUnionFind(ENHENCEDQUICKUNIONPATH, N);
 		testCase(finder);
 		
@@ -58,12 +58,37 @@ public class TestUnionFind {
 		finder.union(9, 4);
 		finder.union(2, 1);
 		System.out.println(finder.connected(0, 7));
+		System.out.println(finder.find(2));
 		System.out.println(finder.connected(8, 9));
 		finder.union(5, 0);
 		finder.union(7, 2);
 		finder.union(6, 1);
 		System.out.println(finder.toString());
+		System.out.println(finder.find(2));
 		System.out.println(finder.connected(0, 7));
+	}
+	
+	public static void testCase2(IUnionFind finder){
+		finder.union(1, 3);
+		finder.union(7, 2);
+		finder.union(9, 6);
+		finder.union(8, 9);
+		finder.union(5, 1);
+		finder.union(0, 3);
+		System.out.println(finder.toString());
+	}
+	
+	public static void testCase3(IUnionFind finder){
+		finder.union(2, 5);
+		finder.union(3, 0);
+		finder.union(9, 7);
+		finder.union(7, 0);
+		finder.union(5, 6);
+		finder.union(2, 8);
+		finder.union(2, 3);
+		finder.union(1, 2);
+		finder.union(4, 1);
+		System.out.println(finder.toString());
 	}
 
 }

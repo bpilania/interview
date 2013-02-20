@@ -27,7 +27,7 @@ public abstract class UnionFindBase implements IUnionFind{
 		StringBuilder builder = new StringBuilder();
 		for(int i = 0; i < N; i ++){
 			builder.append(this.index[i]);
-			builder.append(", ");
+			builder.append(" ");
 		}
 		return builder.toString();
 	}

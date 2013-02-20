@@ -26,7 +26,7 @@ public class EnhancedQuickUnionWeightTree extends UnionFindBase {
 	public void union(int a, int b) {
 		int parent_a = this.getParent(a);
 		int parent_b = this.getParent(b);
-		if(this.treesize[parent_a] > this.treesize[parent_b]){
+		if(this.treesize[parent_a] >= this.treesize[parent_b]){
 			this.index[parent_b] = parent_a;
 			this.treesize[parent_a] += this.treesize[parent_b];
 		} else {
@@ -58,6 +58,12 @@ public class EnhancedQuickUnionWeightTree extends UnionFindBase {
 		} else {
 			return false;
 		}
+	}
+
+	@Override
+	public int find(int a) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 
