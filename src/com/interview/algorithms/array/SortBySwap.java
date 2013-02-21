@@ -11,7 +11,7 @@ package com.interview.algorithms.array;
  * it to the end of the array.
  * 		algorithm: O(N^2), swap(N)
  * 		2. to optimize, swap all the inverse number from min to max
- * 		find min and check if inverse O(N^2), swap(N)
+ * 		find all min and check if inverse O(N^2), swap(N)
  * @author stefaniezhao
  *
  */
@@ -55,7 +55,6 @@ public class SortBySwap {
 			}
 		}
 		return minInverseNumber;
-		
 	}
 	
 	public static int sortBySelectInverseNumber(int[] array){
