@@ -20,7 +20,7 @@ public class TestStack {
 	}
 	public static void main(String[] args) {
 		System.out.println("--------------Test Linked Stack-----------------");
-		Stack<String> stack = new LinkedStack<String>();
+		Stack<String> stack = new FixCapabilityArrayStack<String>(10);
 		testCase(stack);
 	}
 

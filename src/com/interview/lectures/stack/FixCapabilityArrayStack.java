@@ -4,6 +4,7 @@ public class FixCapabilityArrayStack<T> implements Stack<T>{
 	
 	private T[] array;
 	private int N;
+	private int current = 0;
 	
 	@SuppressWarnings("unchecked")
 	public FixCapabilityArrayStack(int N){
@@ -13,26 +14,36 @@ public class FixCapabilityArrayStack<T> implements Stack<T>{
 
 	@Override
 	public void push(T item) {
-		// TODO Auto-generated method stub
+		if(this.size() < N){
+			this.array[current++] = item;
+		} else {
+			System.err.println("Stack is full");
+		}
 		
 	}
 
 	@Override
 	public T pop() {
-		// TODO Auto-generated method stub
-		return null;
+		if(!this.isEmpty()){
+			return this.array[--current];
+		} else {
+			return null;
+		}
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return current == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return current - 1;
+	}
+
+	@Override
+	public T peek() {
+		return this.array[current];
 	}
 
 }
