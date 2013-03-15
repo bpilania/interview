@@ -1,5 +1,7 @@
 package com.interview.lectures.sorting;
 
+import java.util.Arrays;
+
 import com.interview.lectures.stack.LinkedStack;
 import com.interview.lectures.stack.Stack;
 
@@ -30,9 +32,16 @@ public class ConvexHull {
 		Stack<Point> hull = new LinkedStack<Point>();
 		
 		//1. sort point based on Y-coordinate to find p0.
-		getLowestY(points);
+		//getLowestY(points);
+		Arrays.sort(points, Point.BY_Y_AXIS);
 		//2. sort pints by polar angle with respect to p0.
 		Point.sortByPolarAngle(points);
+		
+		
+//		for(Point p : points){
+//			System.out.print(p.toString() + ", ");
+//		}
+//		System.out.println();
 	
 		//find the edges
 		hull.push(points[0]);
@@ -40,7 +49,9 @@ public class ConvexHull {
 		
 		for(int i = 2; i < points.length; i ++){
 			Point top = hull.pop();
+			//System.out.println(top.toString());
 			while(Point.counterclockwise(hull.peek(), top, points[i]) <= 0){
+				//System.out.println(top.toString());
 				top = hull.pop();
 			}
 			hull.push(top);
@@ -72,8 +83,10 @@ public class ConvexHull {
 	
 	
 	private static Point[] generateTestPoint() {
-		Point[] testPoint = new Point[9];
-		String pointStr = "0,0#1,0.5#1,1#2,1.5#0.5,1.5#1,2#0,2#0,1#-0.5,1";
+		Point[] testPoint = new Point[10];
+		//String pointStr = "0,0#1,0.5#1,1#2,1.5#0.5,1.5#1,2#0,2#0,1#-0.5,1";
+		//String pointStr = "7,1#0,4#8,8#3,6#5,3#6,5#4,0#9,9#2,7#1,2";
+		String pointStr = "8,4#9,2#4,9#1,5#0,6#7,7#5,8#3,1#6,3#2,0";
 		String[] points = pointStr.split("#");
 		for(int i = 0; i < points.length; i ++){
 			String[] coords = points[i].split(",");
