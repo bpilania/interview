@@ -26,7 +26,7 @@ import com.interview.utils.ConsoleReader;
  * @author zhaochenting (zhaochenting@gmail.com)
  * 
  */
-public class PathCounter {
+public class C4_10_PathCounter {
 	/**
 	 * @param args
 	 */
@@ -52,7 +52,7 @@ public class PathCounter {
 			System.out.println("INPUT ERROR! MAX Number of the size is 33 * 33");
 			return;
 		}
-		PathCounter counter = new PathCounter();
+		C4_10_PathCounter counter = new C4_10_PathCounter();
 		long path = counter.inverseCalculatePathOptimized(m, n);
 		System.out.println("The path from the left bottom corner to the up right corner in a " + m + "*" + n + " grid is: " + path);
 	}

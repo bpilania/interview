@@ -33,7 +33,7 @@ class NodePair {
  * @author zouzhile (zouzhile@gmail.com)
  *
  */
-public class KValueNodePairSearch {
+public class C5_7_KValueNodePairSearch {
 	
     public NodePair search(BinaryTreeNode currentNode, int sumValue){
         NodePair pair = null;
@@ -92,7 +92,7 @@ public class KValueNodePairSearch {
 		int target = reader.readInt();		
 		System.out.println();
 		
-        KValueNodePairSearch searcher = new KValueNodePairSearch();
+        C5_7_KValueNodePairSearch searcher = new C5_7_KValueNodePairSearch();
         NodePair pair = searcher.search(tree.getRoot(), target);
         if(pair != null)
             System.out.println("K Value Node Pair Found: " + pair.getFirstNode().getValue() + "\t" + pair.getSecondNode().getValue());

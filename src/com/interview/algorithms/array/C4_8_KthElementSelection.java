@@ -9,7 +9,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile
  *
  */
-public class KthElementSelection {
+public class C4_8_KthElementSelection {
 
 	private static final int GROUP_SIZE = 5;
 	
@@ -114,7 +114,7 @@ public class KthElementSelection {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		KthElementSelection selector = new KthElementSelection();
+		C4_8_KthElementSelection selector = new C4_8_KthElementSelection();
 		ConsoleReader reader = new ConsoleReader();
 		//int[] data = new int[]{ 2, 3, 5, 1, 9, 10, -22};
 		System.out.print("Please input array elements: ");

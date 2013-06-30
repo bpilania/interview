@@ -13,7 +13,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile (zouzhile@gmail.com)
  * 
  */
-public class FirstRepeatingElementFinder {
+public class C4_7_RepeatingElementFinder {
 
 	/**
 	 * 
@@ -53,7 +53,7 @@ public class FirstRepeatingElementFinder {
 		sorter.sort(array, 0, array.length - 1);
 		System.out.println();
 		
-		FirstRepeatingElementFinder finder = new FirstRepeatingElementFinder();
+		C4_7_RepeatingElementFinder finder = new C4_7_RepeatingElementFinder();
 		int offset = finder.find(array, 0, array.length - 1);
 		if (offset < 0)
 			System.out.println("No Repeating Element Found!");

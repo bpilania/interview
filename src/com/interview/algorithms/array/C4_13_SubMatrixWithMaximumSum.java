@@ -6,7 +6,7 @@ import java.util.Hashtable;
  * Suppose you have an NxM matrix of positive and negative integers. 
  * Write some code that finds the sub-matrix with the maximum sum of its elements.
  */
-public class SubMatrixWithMaximumSum {
+public class C4_13_SubMatrixWithMaximumSum {
 
 	private int maxSum = Integer.MIN_VALUE;
 	private int maxSumLeftUpperPointRow = 0;
@@ -163,7 +163,7 @@ public class SubMatrixWithMaximumSum {
 		}
 		
 		System.out.println("\n");
-		SubMatrixWithMaximumSum finder = new SubMatrixWithMaximumSum();
+		C4_13_SubMatrixWithMaximumSum finder = new C4_13_SubMatrixWithMaximumSum();
 		finder.findMatrixWithMaxSum(array);
 
 		System.out.println();

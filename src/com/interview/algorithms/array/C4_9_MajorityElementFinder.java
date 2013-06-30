@@ -13,7 +13,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile (zouzhile@gmail.com)
  *
  */
-public class MajorityElementFinder {
+public class C4_9_MajorityElementFinder {
 
 	public Integer find(List<Integer> array){
 		int index = 0;
@@ -43,7 +43,7 @@ public class MajorityElementFinder {
 		for(int input:inputs){
 			array.add(Integer.valueOf(input));
 		}
-		MajorityElementFinder finder = new MajorityElementFinder();
+		C4_9_MajorityElementFinder finder = new C4_9_MajorityElementFinder();
 		Integer result = finder.find(array);
 		System.out.println("The majority element is " + result);
 	}

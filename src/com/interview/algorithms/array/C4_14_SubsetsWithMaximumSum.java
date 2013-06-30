@@ -11,7 +11,7 @@ import java.util.List;
  * @author zouzhile
  *
  */
-public class SubsetsWithMaximumSum {
+public class C4_14_SubsetsWithMaximumSum {
 
 	/**
 	 * 
@@ -65,7 +65,7 @@ public class SubsetsWithMaximumSum {
 	public static void main(String[] args) {
 		int[] set = {1, 2, 3, 4, 5};
 		int k = 7;
-		List<List<Integer>> maxSubsets = new SubsetsWithMaximumSum().findSubsets(set, k);
+		List<List<Integer>> maxSubsets = new C4_14_SubsetsWithMaximumSum().findSubsets(set, k);
 		for(List<Integer> subset : maxSubsets) {
 			for(Integer v : subset) 
 				System.out.print(v + "\t"); 

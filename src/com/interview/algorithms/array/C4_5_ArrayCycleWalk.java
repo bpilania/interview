@@ -38,7 +38,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile
  * 
  */
-public class ArrayCycleWalk {
+public class C4_5_ArrayCycleWalk {
 
 	public void walk(String[][] array) {
 		boolean stop = false;
@@ -95,7 +95,7 @@ public class ArrayCycleWalk {
 				array[i][j] = row[j];
 			}
 		}
-		ArrayCycleWalk walker = new ArrayCycleWalk();
+		C4_5_ArrayCycleWalk walker = new C4_5_ArrayCycleWalk();
 		walker.walk(array);
 	}
 

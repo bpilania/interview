@@ -9,7 +9,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile (zouzhile@gmail.com)
  *
  */
-public class BinarySearch {
+public class C4_6_BinarySearch {
 	
 	/**
 	 * Recursive implementation
@@ -72,7 +72,7 @@ public class BinarySearch {
 		int target = reader.readInt();		
 		System.out.println();
 		
-		BinarySearch searcher = new BinarySearch();
+		C4_6_BinarySearch searcher = new C4_6_BinarySearch();
 		// Recursive Search
 		int offset = searcher.searchRecursively(array, 0, array.length - 1, target);
 		if(offset >= 0){

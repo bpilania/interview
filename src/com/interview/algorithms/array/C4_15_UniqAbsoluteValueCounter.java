@@ -8,7 +8,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile
  *
  */
-public class UniqAbsoluteValueCounter {
+public class C4_15_UniqAbsoluteValueCounter {
 
 	public int countUniqAbsoluteValues(int [] array){
 		int leftPos = 0;
@@ -55,7 +55,7 @@ public class UniqAbsoluteValueCounter {
 		System.out.println("Count the amount of unique absolute values in the given int array");
 		System.out.println("===============================================================================");
 		int [] array = reader.readSortedIntItems();
-		UniqAbsoluteValueCounter counter = new UniqAbsoluteValueCounter();
+		C4_15_UniqAbsoluteValueCounter counter = new C4_15_UniqAbsoluteValueCounter();
 		int count = counter.countUniqAbsoluteValues(array);
 		System.out.println("The amount of unique absolute value: " + count);
 	}

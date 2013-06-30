@@ -11,7 +11,7 @@ import java.util.Set;
  * @author stefanie
  *
  */
-public class SubArraysWithSumClosestToK {
+public class C4_12_SubArraysWithSumClosestToK {
 
 	private static HashMap<Integer, List<Integer>> subarrays = new HashMap<Integer, List<Integer>>(); 	
 	

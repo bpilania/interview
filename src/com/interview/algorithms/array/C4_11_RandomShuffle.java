@@ -22,7 +22,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile (zouzhile@gmail.com)
  *
  */
-public class RandomShuffle {
+public class C4_11_RandomShuffle {
 	
 	public void shuffle(int [] array){
 		Random random = new Random();
@@ -47,7 +47,7 @@ public class RandomShuffle {
 		int[] array = reader.readIntItems();
 		System.out.println();
 		
-		RandomShuffle shuffler = new RandomShuffle();
+		C4_11_RandomShuffle shuffler = new C4_11_RandomShuffle();
 		shuffler.shuffle(array);
 		System.out.print("The shuffled array is : ");
 		for(int i: array){
