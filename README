@@ -60,6 +60,7 @@ C5: Tree
     4) How do you find out the fifth maximum element in an Binary Search Tree in efficient manner. Note: You should not use use any extra space. i.e sorting Binary Search Tree and storing the results in an array and listing out the fifth element.
     5) Given a binary tree, programmatically you need to prove it is a binary search tree.
     6) Given two binary trees, write a compare function to check if they are equal or not. Being equal means that they have the same value and same structure.
+    7) Given a tree, find pairs of nodes with each pair nodes' values sum equal to a given number K.
 
 C6: Graph
     1) What's the maximum number of edges in a Directed Asynclic Graph with N node.
