@@ -30,6 +30,7 @@ C1: General
     21) Rote an array
     22) How to find the median among the given numbers whose values are unknown but falls into a narrow range.
     23) Given a set of ranges, find the two ranges with the greatest overlap.
+    24) Verify whether an arithmatic expression is valid, suppose the expression only contains "+", "-", "*", "/", "(", ")" and numbers are integers.
 
 C2: CS Theory
     1) What is the difference between a mutex and a semaphore? Which one would you use to protect access to an increment operation?
