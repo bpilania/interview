@@ -9,7 +9,7 @@ package com.interview.algorithms.general;
  * @author stefaniezhao
  *
  */
-public class NumberConvertor {
+public class C1_30_NumberConvertor {
 	
 	public static int convert(int i, int n, int k){
 		int result = 0;

@@ -1,6 +1,6 @@
 package com.interview.algorithms.general;
 
-public class Random7 {
+public class C1_31_Random7 {
 
 	/**
 	 * random function returns random number [1,5]
@@ -24,7 +24,7 @@ public class Random7 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(new Random7().rand7());
+		System.out.println(new C1_31_Random7().rand7());
 	}
 
 }

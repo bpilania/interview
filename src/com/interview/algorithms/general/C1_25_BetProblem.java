@@ -50,7 +50,7 @@ The initial amount is 15. As stated in the problem, the amount of bet doubles fo
  * @author stefanie
  *
  */
-public class BetProblem {
+public class C1_25_BetProblem {
 	static int getFinalAmount(int initialAmount , String betResults) {
 		int betAmount = 1;
 		int amount = initialAmount;
@@ -72,7 +72,7 @@ public class BetProblem {
 	}
 	
 	public static void main(String[] args){
-		int result = BetProblem.getFinalAmount(2, "LLLWLLLL");
+		int result = C1_25_BetProblem.getFinalAmount(2, "LLLWLLLL");
 		System.out.println(result);
 	}
 }

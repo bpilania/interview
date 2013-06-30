@@ -18,7 +18,7 @@ package com.interview.algorithms.general;
  * @author stefanie
  *
  */
-public class BoxPlacer {
+public class C1_27_BoxPlacer {
 
 	public static void place(int[] boxes, int balls, int position) {
 		if (balls <= 0) {

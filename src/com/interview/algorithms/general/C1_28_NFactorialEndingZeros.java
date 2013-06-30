@@ -11,7 +11,7 @@ import com.interview.utils.ConsoleReader;
  * @author stefanie
  *
  */
-public class Factorial {
+public class C1_28_NFactorialEndingZeros {
 
 	/**
 	 * N! = K * (10)^m = K * 2^m * 5^m
@@ -47,7 +47,7 @@ public class Factorial {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("Count ending zero of n's Factorial");
+		System.out.println("Count ending zero of n's C1_28_NFactorialEndingZeros");
 		System.out.println("========================================================================");
 		ConsoleReader reader = new ConsoleReader();
 		System.out.print("Plz input an integer : ");
@@ -57,7 +57,7 @@ public class Factorial {
         	factorial = factorial.multiply(BigInteger.valueOf(i));
         }
         System.out.println("The factorial of " + value + " is : " + factorial);
-        Factorial fac = new Factorial();
+        C1_28_NFactorialEndingZeros fac = new C1_28_NFactorialEndingZeros();
         int amount = fac.count1(value);
         System.out.println("The amount of ending zero by count1 is : " + amount);
         amount = fac.count2(value);

@@ -2,7 +2,7 @@ package com.interview.algorithms.general;
 
 import com.interview.utils.ConsoleReader;
 
-public class GreatestCommonDivisor {
+public class C1_29_GreatestCommonDivisor {
 
 	public int gcd(int x, int y){
 		if (x < y) {
@@ -20,7 +20,7 @@ public class GreatestCommonDivisor {
 		ConsoleReader reader = new ConsoleReader();
 		System.out.print("Plz input two integers : ");
 		int[] inputs = reader.readIntItems();
-		GreatestCommonDivisor gcd = new GreatestCommonDivisor();
+		C1_29_GreatestCommonDivisor gcd = new C1_29_GreatestCommonDivisor();
 		System.out.println("The greatest common divisor is: " + gcd.gcd(inputs[0], inputs[1]));
 	}
 

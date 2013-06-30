@@ -7,7 +7,7 @@ import com.interview.utils.ConsoleReader;
  * @author zouzhile (zouzhile@gmail.com)
  *
  */
-public class BinaryOneCounter {
+public class C1_26_BinaryOneCounter {
 
 	public int count(int value){
 		int amount = 0;
@@ -26,7 +26,7 @@ public class BinaryOneCounter {
         int value = reader.readInt();
         System.out.println("The binary form of the input integer: " + Integer.toBinaryString(value));
         
-        BinaryOneCounter counter = new BinaryOneCounter();
+        C1_26_BinaryOneCounter counter = new C1_26_BinaryOneCounter();
         int amount = counter.count(value);
         System.out.println("The amount of '1' is : " + amount);
 	}
