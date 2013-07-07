@@ -11,6 +11,7 @@ public class C1_4_ExcelColumnToInteger {
 
     public static int transform(String column) {
 
+        return -1;
     }
 
     public static void main(String[] args) {

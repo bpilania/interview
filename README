@@ -37,7 +37,6 @@ C1: General
     28) Get the amout of ending zeros of N! without calculating N!
     29) Implement a function to get the greatest common divisor of two given numbers.
     30) Remove all the number contains 7 from the integer, and define a method to return corresponding number when giving a regular number
-    31) Implement the random function returns a random number between 1 and 7
 
 C2: CS Theory
     1) What is the difference between a mutex and a semaphore? Which one would you use to protect access to an increment operation?
