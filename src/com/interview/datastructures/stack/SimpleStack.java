@@ -5,13 +5,13 @@ package com.interview.datastructures.stack;
  * @author zouzhile
  *
  */
-public class SimpleStack {
+public class SimpleStack <T extends Comparable>{
 	
 	private Node head;
 	private Node minHead;
 	
 	class Node {
-		int value;
+		T value;
 		Node next, previous;
 		
 		protected Node clone() { 
@@ -27,7 +27,7 @@ public class SimpleStack {
 		
 	}
 	
-	public void push(int value){
+	public void push(T value){
 		Node node = new Node();
 		node.value = value;
 		
@@ -37,7 +37,7 @@ public class SimpleStack {
 			minHead = clone;			
 		} else {
 			Node clone = null;
-			if(node.value < minHead.value)  
+			if(node.value.compareTo(minHead.value) < 0)
 				clone = node.clone();
 			else
 				clone = minHead.clone();
@@ -50,8 +50,8 @@ public class SimpleStack {
 		}
 	}
 	
-	public int pop(){
-		int result = Integer.MIN_VALUE;
+	public T pop(){
+		T result = null;
 		
 		if(head != null) {
 			// min stack
@@ -69,8 +69,8 @@ public class SimpleStack {
 		return result;
 	}
 	
-	public int getMinValue(){
-		int min = Integer.MIN_VALUE;
+	public T getMinValue(){
+		T min = null;
 		if(minHead != null)
 			min = minHead.value;
 		return min;

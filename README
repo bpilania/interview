@@ -1,6 +1,7 @@
 Useful Interview Question Links:
     http://geeksforgeeks.org/forum/forum/interview-questions
     http://www.careercup.com/page
+    http://www.careercup.com/page?pid=google-interview-questions
     http://codekata.pragprog.com/2007/01/code_kata_backg.html#more
     http://www.impactinterview.com/2009/10/140-google-interview-questions/#software_engineer
 
@@ -31,9 +32,9 @@ C1: General
     23) Given a set of ranges, find the two ranges with the greatest overlap.
     24) Verify whether an arithmatic expression is valid, suppose the expression only contains "+", "-", "*", "/", "(", ")" and numbers are integers.
     25) The bet problem
-    26) Count the amout of '1's in an integer's binary form
+    26) Count the amount of '1's in an integer's binary form
     27) There are k exactly same boxes, and we have to put n exactly same items into them. Assume there is no limitation on box, and the only requirement is that each item should be put into one box. Please write out the code to print out all the possible possibilities, print error the input can not get any result.
-    28) Get the amout of ending zeros of N! without calculating N!
+    28) Get the amount of ending zeros of N! without calculating N!
     29) Implement a function to get the greatest common divisor of two given numbers.
     30) Remove all the number contains 7 from the integer, and define a method to return corresponding number when giving a regular number
 
