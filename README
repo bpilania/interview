@@ -11,13 +11,10 @@ C1: General
     1) Given a function which produces a random integer in the range 1 to 5, write a function which produces a random integer in the range 1 to 7.
     2) Write a regular expression which matches a email address. (Ramp up Regular Expression)
     3) Write a function f(a, b) which takes two character string arguments and returns a string containing only the characters found in both strings in the order of a. Write a version which is order N-squared and one which is order N.
-    4) Write a function (with helper functions if needed) called to Excel that takes an excel column value (A,B,C,D��A,AB,AC,��AAA..) and returns a corresponding integer value (A=1,B=2,��AA=26..).
+    4) Write a function (with helper functions if needed) called to Excel that takes an excel column value (A,B,C,D,..Z,AA,AB,AC,..,ZZ,AAA..) and returns a corresponding integer value (A=1,B=2,..,AA=26..).
     5) You have a stream of infinite queries (ie: real time Google search queries that people are entering). Describe how you would go about finding a good estimate of 1000 samples from this never ending set of data and then write code for it.
-    
     7) Write some code to find all permutations of the letters in a particular string.
     8) What method would you use to look up a word in a dictionary?
-    9) You have eight balls all of the same size. 7 of them weigh the same, and one of them weighs slightly more. How can you fine the ball that is heavier by using a balance and only two weighings?
-    10) There is a linked list of numbers of length N. N is very large and you don't know N. You have to write a function that will return k random numbers from the list. Numbers should be completely random. Hint: 1. Use random function rand() (returns a number between 0 and 1) and irand() (return either 0 or 1) 2. It should be done in O(n).
     11) There is an array A[N] of N numbers. You have to compose an array Output[N] such that Output[i] will be equal to multiplication of all the elements of A[N] except A[i]. For example Output[0] will be multiplication of A[1] to A[N-1] and Output[1] will be multiplication of A[0] and from A[2] to A[N-1]. Solve it without division operator and in O(n).
     12) Find or determine non existence of a number in a sorted list of N numbers where the numbers range over M, M>> N and N large enough to span multiple disks. Algorithm to beat O(log n) bonus points for constant time algorithm.
     13) You are given an array [a1 To an] and we have to construct another array [b1 To bn] where bi = a1*a2*��an/ai. you are allowed to use only constant space and the time complexity is O(n). No divisions are allowed.
