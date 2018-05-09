@@ -68,6 +68,7 @@ C4: Array
    14) Given a set S, find all the maximal subsets whose sum <= k.
    15) Find the uniq amount of absolute values in a given sorted array
    16) Write code to reverse a array of int
+   17) Find kth largest element in unsorted array
    
 C5: Tree
     1) Describe the algorithm for a depth-first graph traversal.
