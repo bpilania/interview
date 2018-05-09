@@ -50,6 +50,7 @@ C3: List
     1) You are given a list of numbers, and the list is circular list. Write the most efficient algorithm to find the minimum # in this list. Find any given # in the list. The numbers in the list are always increasing but you don�� know where the circular list begins, ie: 38, 40, 55, 89, 6, 13, 20, 23, 36.
     2) Write a function to find the middle node of a single link list.
     3) Given two linked lists, return the intersection of the two lists: i.e. return a list containing only the elements that occur in both of the input lists.
+    4) Delete N nodes after M nodes of a linked list
 
 C4: Array
     1) Suppose you have an NxN matrix of positive and negative integers. Write some code that finds the sub-matrix with the maximum sum of its elements.
